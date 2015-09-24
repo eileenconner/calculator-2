@@ -13,9 +13,9 @@ while True:
     
     operator = tokenized_input[0]
 
-    if operator == "q":
+    if operator.lower() == "q":
         break
-
+    
     num1 = int(tokenized_input[1])
     try:
         num2 = int(tokenized_input[2])
@@ -40,5 +40,3 @@ while True:
         print mod(num1, num2)
     else:
         print "That is not an accepted input! Try again."
-
-
