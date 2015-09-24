@@ -7,6 +7,13 @@ calculator program yourself in this file.
 
 from arithmetic import *
 
+def num_converter(number_text):
+    try:
+        number = int(number_text)
+    except ValueError:
+        number = float(number_text)
+    return number
+
 while True:
     user_input = raw_input("> ")
     tokenized_input = user_input.split()
@@ -15,10 +22,10 @@ while True:
 
     if operator.lower() == "q":
         break
-    
-    num1 = int(tokenized_input[1])
+
+    num1 = num_converter(tokenized_input[1])
     try:
-        num2 = int(tokenized_input[2])
+        num2 = num_converter(tokenized_input[2])
     except IndexError:
         pass
 
