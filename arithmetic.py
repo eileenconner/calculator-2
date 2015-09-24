@@ -1,9 +1,20 @@
-def add(num1, num2):
-    return num1 + num2
+def add(number_list):
+    answer = 0
+    for num in number_list:
+        answer += num
+    return answer
 
 
-def subtract(num1, num2):
-    return num1 - num2
+def subtract(number_list):
+    answer = 0
+    first = True
+    for num in number_list:
+        if first:
+            answer += num
+            first = False
+        else:
+            answer -= num
+    return answer
 
 
 def multiply(num1, num2):
